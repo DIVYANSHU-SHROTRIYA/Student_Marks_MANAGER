@@ -13,7 +13,7 @@ export default function StudentDashboard({ user, onLogout }) {
   useEffect(() => {
   const fetchResult = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/student/result', {
+      const res = await axios.get('https://student-marks-manager.onrender.com/api/student/result', {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
       });
       setResult(res.data);

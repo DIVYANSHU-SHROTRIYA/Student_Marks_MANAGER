@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const BASE = 'http://localhost:5000';
+const BASE = 'https://student-marks-manager.onrender.com';
 
 export default function AdminDashboard({ user, onLogout }) {
   const [tab, setTab]           = useState('stats');

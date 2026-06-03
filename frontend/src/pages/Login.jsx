@@ -10,7 +10,7 @@ export default  function Login({ onLogin}){
   setError('');
   setLoading(true);
   try {
-    const res = await axios.post('http://localhost:5000/api/auth/login', form);
+    const res = await axios.post('https://student-marks-manager.onrender.com/api/auth/login', form);
     
     // Save to storage first
     localStorage.setItem('token', res.data.token);
