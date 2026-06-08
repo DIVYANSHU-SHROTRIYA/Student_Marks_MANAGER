@@ -17,7 +17,7 @@ router.get('/stats', async (req, res) => {
     let passed = 0, failed = 0;
     students.forEach(s => {
       const pct = parseFloat(s.toJSON().percentage);
-      if (pct >= 50) passed++;
+      if (pct >= 33) passed++;
       else failed++;
     });
 

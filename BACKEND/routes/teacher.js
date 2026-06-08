@@ -17,20 +17,20 @@ router.get('/students', async (req, res) => {
 router.post('/students', async (req, res) => {
   const { name, username, password, rollNumber, className, subjects } = req.body;
   
-  console.log('Request body:', req.body); // add this line
+  console.log('Request body:', req.body); 
 
   if (!name || !username || !password || !rollNumber || !className)
     return res.status(400).json({ message: 'Please fill all required fields' });
 
   try {
     const userExists = await User.findOne({ username });
-    console.log('User exists check done'); // add this line
+    
     
     if (userExists)
       return res.status(400).json({ message: 'Username already taken' });
 
     const rollExists = await Student.findOne({ rollNumber });
-    console.log('Roll exists check done'); // add this line
+    
     
     if (rollExists)
       return res.status(400).json({ message: 'Roll number already exists' });
