@@ -64,12 +64,7 @@ export default  function Login({ onLogin}){
           </button>
         </form>
  
-        <div style={styles.hint}>
-            {/* 
-      <strong>Teacher:</strong> username: <code>teacher</code> | password: <code>teacher123</code><br/>
-      <small>(Run /api/auth/setup-teacher once to create teacher account)</small>
-    */}
-        </div>
+       
       </div>
     </div>
   );
